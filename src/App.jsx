@@ -4,9 +4,9 @@ function App() {
   return (
     <>
       <HomePage />
-      {Array.from({ length: 100 }).map((_, i) => (
+      {/* {Array.from({ length: 100 }).map((_, i) => (
         <h1 key={i}>Hello</h1>
-      ))}
+      ))} */}
     </>
   );
 }
