@@ -3,6 +3,7 @@ import { Container, Box, Typography } from "@mui/material";
 import Navbar from "../components/Navbar";
 import CategoryTabList from "../components/CategoryTabList";
 import PropertiesList from "../components/PropertiesList";
+import Footer from "../components/Footer.jsx";
 
 const HomePage = () => {
   return (
@@ -10,6 +11,7 @@ const HomePage = () => {
       <Navbar />
       <CategoryTabList />
       <PropertiesList />
+      <Footer />
     </Container>
   );
 };
