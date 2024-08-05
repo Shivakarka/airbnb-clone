@@ -14,6 +14,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import LanguageIcon from "@mui/icons-material/Language";
 
 import { useEffect, useState } from "react";
+import UserProfile from "./UserProfile";
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -254,6 +255,7 @@ const Navbar = () => {
                 alignContent: "center",
                 alignItems: "center",
                 cursor: "pointer",
+                "&:hover": { outline: "1px solid #aaaaaa" },
               }}
             >
               <MenuIcon />
@@ -262,6 +264,11 @@ const Navbar = () => {
           </Box>
         </Toolbar>
       </AppBar>
+      <UserProfile
+        anchorEl={anchorEl}
+        handleClose={handleClose}
+        open={Boolean(anchorEl)}
+      />
     </>
   );
 };
