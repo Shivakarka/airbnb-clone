@@ -78,6 +78,8 @@ const Navbar = () => {
               display: "block",
               marginLeft: "2.5%",
               color: "rgb(255,56,92,1)",
+              cursor: "pointer",
+              minWidth: "150px"
             }}
           >
             <path
@@ -123,7 +125,6 @@ const Navbar = () => {
               <Typography
                 onClick={(e) => {
                   e.stopPropagation();
-                  dispatch(setIsWhereSelected());
                   setShowHideSearchWidget(true);
                 }}
                 variant="h6"
@@ -135,7 +136,6 @@ const Navbar = () => {
               <Typography
                 onClick={(e) => {
                   e.stopPropagation();
-                  dispatch(setIsCheckinSelected());
                   setShowHideSearchWidget(true);
                 }}
                 sx={{ cursor: "pointer", fontSize: "14px" }}
@@ -146,7 +146,6 @@ const Navbar = () => {
               <Typography
                 onClick={(e) => {
                   e.stopPropagation();
-                  dispatch(setIsAddGuesSelected());
                   setShowHideSearchWidget(true);
                 }}
                 sx={{ fontWeight: "100", fontSize: "14px" }}
@@ -157,7 +156,6 @@ const Navbar = () => {
               <Avatar
                 onClick={(e) => {
                   e.stopPropagation();
-                  dispatch(setIsWhereSelected());
                   setShowHideSearchWidget(true);
                 }}
                 sx={{ backgroundColor: "red", width: "35px", height: "35px" }}
@@ -166,7 +164,18 @@ const Navbar = () => {
               </Avatar>
             </Paper>
           ) : (
-            <Box sx={{ width: "30%", height: "45px" }}>
+            <Box
+              sx={{
+                width: "30%",
+                height: "45px",
+                display: {
+                  xs: "none",
+                  sm: "none",
+                  md: "block",
+                  lg: "block",
+                },
+              }}
+            >
               <Tabs
                 value={value}
                 onChange={handleChange}
@@ -224,6 +233,12 @@ const Navbar = () => {
                 padding: "10px",
                 borderRadius: "37px",
                 "&:hover": { backgroundColor: "whitesmoke" },
+                display: {
+                  xs: "none",
+                  sm: "none",
+                  md: "flex",
+                  lg: "flex",
+                },
               }}
             >
               Airbnb your home
@@ -232,10 +247,15 @@ const Navbar = () => {
               sx={{
                 width: "40px",
                 height: "40px",
-                display: "grid",
                 borderRadius: "50%",
                 placeItems: "center",
                 "&:hover": { backgroundColor: "whitesmoke" },
+                display: {
+                  xs: "none",
+                  sm: "none",
+                  md: "flex",
+                  lg: "flex",
+                },
               }}
             >
               <LanguageIcon sx={{ cursor: "pointer", fontSize: "20px" }} />
