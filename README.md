@@ -1,8 +1,13 @@
-# React + Vite
+# Airbnb Clone Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a clone website of homepage of Airbnb created using React JS, Tailwind CSS and MUI. 
 
-Currently, two official plugins are available:
+Live Link - https://airbnb-clone-theta-neon.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Screenshots :
+
+![chrome-capture-2024-8-5](https://github.com/user-attachments/assets/3a992d2a-5897-4c3a-befb-a6f1c88c0e50)
+![chrome-capture-2024-8-5 (1)](https://github.com/user-attachments/assets/0eecb78d-a9f0-4195-82fd-e91f6e6440ed)
+![chrome-capture-2024-8-5 (2)](https://github.com/user-attachments/assets/1901ad3f-1106-43df-9ab5-101f8d3222f7)
+
+
