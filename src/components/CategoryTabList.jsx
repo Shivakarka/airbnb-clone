@@ -143,14 +143,19 @@ export default function CategoryTabList() {
         width: { xs: "80%", sm: "80%", md: "84%", lg: "100%" },
         height: "100%",
         bgcolor: "background.paper",
-        marginTop: "5rem",
+        marginTop: {
+          xs: "5rem",
+          sm: "10rem",
+          md: "10rem",
+          lg: "10rem",
+        },
       }}
     >
       <Tabs
         value={value}
         onChange={handleChange}
         variant="scrollable"
-        textColor="#000000"
+        textColor="inherit"
         indicatorColor="secondary"
         scrollButtons
         aria-label="visible arrows tabs example"
@@ -169,6 +174,7 @@ export default function CategoryTabList() {
             <Tab
               label={
                 <span style={{ textTransform: "capitalize" }}>{item.name}</span>
+
               }
               icon={
                 <img
@@ -179,6 +185,7 @@ export default function CategoryTabList() {
               sx={{
                 fontSize: "12px",
               }}
+                key={index}
             />
           );
         })}

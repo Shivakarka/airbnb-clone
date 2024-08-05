@@ -83,7 +83,7 @@ export default function SearchContainer({ hideSearchWidget }) {
                     borderRadius: "30px",
                     backgroundColor: "whitesmoke",
                     marginBottom: "10px",
-                    display: "flex",
+                    display: { xs: "none", sm: "flex" },
                     justifyContent: "space-between",
                     alignContent: "center",
                     alignItems: "center",
@@ -302,7 +302,7 @@ export default function SearchContainer({ hideSearchWidget }) {
 
                             sx={{
                                 backgroundColor: "rgb(255,56,92,1)",
-                                width:'20%',
+                                width:'15%',
                                 height:  "70%",
                                 // border:'1px solid blue',
                                 borderRadius: "50%",

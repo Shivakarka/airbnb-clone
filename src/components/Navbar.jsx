@@ -16,6 +16,12 @@ import LanguageIcon from "@mui/icons-material/Language";
 import { useEffect, useState } from "react";
 import UserProfile from "./UserProfile";
 import SearchContainer from "./SearchContainer.jsx";
+import {
+    setIsAddGuestSelected,
+    setIsCheckinSelected,
+    setIsWhereSelected,
+} from "../redux/features/searchWidgetSlice";
+import {useDispatch} from "react-redux";
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -23,6 +29,8 @@ const Navbar = () => {
   const [showHideSearchWidget, setShowHideSearchWidget] = useState(true);
   //!Tab state and handler
   const [value, setValue] = useState("one");
+
+  const dispatch = useDispatch();
   // outer click check state
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -67,7 +75,12 @@ const Navbar = () => {
             justifyContent: "space-between",
             alignContent: "center",
             alignItems: "center",
-            gap: "20px",
+            gap: {
+                xs: "30%",
+                sm: "30%",
+                md: "20px",
+                lg: "20px",
+            },
             padding: "10px",
           }}
         >
@@ -126,6 +139,7 @@ const Navbar = () => {
               <Typography
                 onClick={(e) => {
                   e.stopPropagation();
+                    dispatch(setIsWhereSelected());
                   setShowHideSearchWidget(true);
                 }}
                 variant="h6"
@@ -137,6 +151,7 @@ const Navbar = () => {
               <Typography
                 onClick={(e) => {
                   e.stopPropagation();
+                    dispatch(setIsCheckinSelected());
                   setShowHideSearchWidget(true);
                 }}
                 sx={{ cursor: "pointer", fontSize: "14px" }}
@@ -147,6 +162,7 @@ const Navbar = () => {
               <Typography
                 onClick={(e) => {
                   e.stopPropagation();
+                    dispatch(setIsAddGuestSelected());
                   setShowHideSearchWidget(true);
                 }}
                 sx={{ fontWeight: "100", fontSize: "14px" }}
@@ -157,6 +173,7 @@ const Navbar = () => {
               <Avatar
                 onClick={(e) => {
                   e.stopPropagation();
+                  dispatch(setIsWhereSelected())
                   setShowHideSearchWidget(true);
                 }}
                 sx={{ backgroundColor: "red", width: "35px", height: "35px" }}
@@ -180,7 +197,7 @@ const Navbar = () => {
               <Tabs
                 value={value}
                 onChange={handleChange}
-                textColor="#000000"
+                textColor="inherit"
                 indicatorColor="#000"
                 aria-label="wrapped label tabs example"
                 centered
