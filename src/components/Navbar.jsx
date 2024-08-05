@@ -15,6 +15,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 
 import { useEffect, useState } from "react";
 import UserProfile from "./UserProfile";
+import SearchContainer from "./SearchContainer.jsx";
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -283,6 +284,9 @@ const Navbar = () => {
             </Paper>
           </Box>
         </Toolbar>
+          {showHideSearchWidget && (
+              <SearchContainer hideSearchWidget={hideSearchWidget} />
+          )}
       </AppBar>
       <UserProfile
         anchorEl={anchorEl}
